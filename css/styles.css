@@ -146,6 +146,7 @@ main {
 
 .card__info {
     width: 35%;
+    padding: 45px 30px;
 }
 
 .card__model {
@@ -194,4 +195,161 @@ main {
     opacity: 1;
 }
 
+.card__badge {
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    background-color: #ffa60d;
+    color: #fff;
+    padding: 7px;
+}
 
+.card__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.card__title a {
+    color: #5e4fff;
+}
+
+.card__title a:hover,
+.card__title a:focus,
+.card__title a:active {
+    color: #a200b8;
+}
+
+.card__subtitle {
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.stars {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.star {
+    display: inline-block;
+    width: 14px; /* outline or area for each star */
+    height: 14px;
+    background-image: url(../img/img/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* set up size of image by height of display (another rule = cover set up size by width */
+}
+
+[data-stars="0"] .star:nth-child(n+1),
+[data-stars="1"] .star:nth-child(n+2),
+[data-stars="2"] .star:nth-child(n+3),
+[data-stars="3"] .star:nth-child(n+4),
+[data-stars="4"] .star:nth-child(n+5) {
+    opacity: .4;
+}
+
+.card__price {
+    font-size: 1.8rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.card__price::before {
+    content: '$';
+    margin-left: .3em;
+}
+
+[data-currency="uah"] .card__price::before {
+    content: '₴'; /* if data-currency in html is uah */
+}
+
+.sizes__list {
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: row wrap;
+}
+
+.sizes__list:after {
+    content: '';
+}
+
+.sizes__item {
+    display: inline-block;
+}
+
+.sizes__link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px dotted transparent;
+    text-align: center;
+    line-height: 24px;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.sizes__link--active {
+    border-color: #000;
+}
+
+.sizes__link:hover,
+.sizes__link:focus,
+.sizes__link:active {
+    border-color: #000;
+}
+
+.card__buttons {
+    margin: 30px 0;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px 25px;
+    display: block;
+    border: 2px solid #000;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn--accent {
+    background-color: #a200b8;
+    border-color: #a200b8;
+    color: #fff;
+}
+
+.btn--accent:hover,
+.btn--accent:focus,
+.btn--accent:active {
+    color: #a200b8;
+    background-color: #fff;
+}
+
+.stars2 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    background-image: linear-gradient(to right, #a200b8 0, #a200b8 25%, #fff 25%);
+}
+
+.star2 li {
+    display: inline-block;
+    width: 14px; /* outline or area for each star */
+    height: 14px;
+    background-image: url(../img/img/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* set up size of image by height of display (another rule = cover set up size by width */
+}
